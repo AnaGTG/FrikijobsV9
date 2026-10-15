@@ -1,0 +1,16 @@
+name: FrikiJobs
+version: 1.0-SNAPSHOT
+main: com.frikifest.frikijobs.FrikiJobs
+api-version: '1.20'
+commands:
+  jobs:
+    description: Comando principal del sistema de trabajos FrikiJobs.
+    usage: /jobs [info|stats|set|settier|remove|reload] [jugador] [trabajo/tier]
+    permission: jobs.use
+permissions:
+  jobs.use:
+    description: Permite abrir el menú de trabajos y consultar el estado personal (/jobs info).
+    default: true
+  jobs.admin:
+    description: Permite administrar FrikiJobs (asignar, cambiar tier, quitar trabajos y recargar configuración).
+    default: op
